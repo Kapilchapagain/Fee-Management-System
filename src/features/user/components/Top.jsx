@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Top = () => {
+
+
+const Top = ({setShowForm,td}) => {
   return (
     
                 
@@ -11,19 +13,19 @@ const Top = () => {
 
                         <div>
                             <p>Total Due</p>
-                            <p className='text-xl bg-white h-8 w-fit rounded'>10,000</p>
+                            <p className='text-xl bg-white h-8 w-fit rounded'>{td.TotalDue}</p>
                         </div>
 
                         <div>
                             <p>Total Paid</p>
-                            <p className='text-xl'>20,000</p>
+                            <p className='text-xl'>{td.TotalPaid}</p>
                         </div>
                         <div>
                             <p>Next Due Date</p>
-                            <p className='text-xl'>October 15, 2024</p>
+                            <p className='text-xl'>{td.NextDueDate}</p>
                         </div>
                         <div className='mb-5'>
-                            <button className='bg-amber-400 h-12 w-48 rounded-3xl text-white text-lg '>Pay Total Due</button>
+                            <button onClick={()=>setShowForm(true)} className='bg-amber-400 h-12 w-48 rounded-3xl text-white text-lg '>Pay Total Due</button>
                         </div>
 
                     </div>
