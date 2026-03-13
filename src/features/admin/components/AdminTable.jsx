@@ -19,7 +19,7 @@ const AdminTable = () => {
     //     navigate("/Profile")
     // }
   return (
-    <div className='flex'>
+    <div className='flex '>
     <div className='m-10  h-fit rounded bg-gray-100  '>
                     <div className='flex justify-between px-5 '>
                         <div className='flex mt-8'>
@@ -28,7 +28,7 @@ const AdminTable = () => {
 
                         </div>
 
-                        <button onClick={()=>{setShowReg(true),setEditData({})}} className='bg-blue-600 h-10 w-40 text-white rounded font-serif mt-8'>Add Student</button>
+                        <button onClick={()=>{setShowReg(true),setEditData(null)}} className='bg-blue-600 h-10 w-40 text-white rounded font-serif mt-8'>Add Student</button>
 
 
                     </div>
@@ -84,14 +84,12 @@ const AdminTable = () => {
                     </div>
                     {
         showReg && (
-          <div className='h-screen w-screen fixed inset-0 '>
+          <div className='h-screen w-screen absolute inset-0 '>
         <Signup  setShowReg={setShowReg} obj={editData} />
       </div>
         )
         
       }
-     
-
      
                 </div>
                 </div>
