@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { students } from "../../../Data";
 
-const Dueform=({setShowForm})=> {
+const Dueform=({setShowForm,obj})=> {
   const [totalFee,setTotalFee]=useState("")
   const [payDue,setPayDue]=useState("")
   const [error,setError]=useState("")
@@ -39,13 +40,8 @@ const Dueform=({setShowForm})=> {
 
         {/* Total Fee */}
         <div className="flex items-center justify-between mb-4">
-          <label className="font-medium">Total Fee :</label>
-          <input type="Number" min={0} value={totalFee} onChange={(e) => setTotalFee(e.target.value)}  className="border rounded px-3 py-1 w-40 outline-none"/>
-          {error && (
-  <p className="text-red-500 text-sm text-center mb-3">
-    {error}
-  </p>
-)}
+          <label className="font-medium">Total Fee :</label>{obj}<span></span>
+        
         </div>
 
         {/* Pay Due */}

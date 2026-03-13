@@ -13,6 +13,7 @@ const obj={
 }
 
 
+
 const UserLayout = () => {
   const [showForm,setShowForm]=useState(false)
   return (
@@ -29,7 +30,7 @@ const UserLayout = () => {
       {
         showForm ?(
           <div className='h-screen w-screen absolute'>
-        <DueForm setShowForm={setShowForm} />
+        <DueForm obj={obj.TotalDue} setShowForm={setShowForm} />
       </div>
 
         ):""
