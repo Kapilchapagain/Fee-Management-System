@@ -10,7 +10,7 @@ import UserTable from '../features/admin/components/UserTable'
 const AdminLayout = () => {
     const[showDash,setShowDash]=useState(true)
     return (
-        <div className='flex h-screen w-screen bg-white'>
+        <div className='flex h-full w-full bg-white'>
 
             <Sidebar setShowDash={setShowDash}/>
             
