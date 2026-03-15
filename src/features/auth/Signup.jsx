@@ -2,13 +2,13 @@ import React from 'react'
 import { useState } from 'react'
 
 const Signup = ({ setShowReg, obj }) => {
-  const [name, setNameData] = useState("")
-  const [email, setEmailData] = useState("")
-  const [classData, setClassData] = useState("")
-  const [phone, setPhoneData] = useState("")
-  const [totalFee, setTotalFee] = useState("")
-  const [dueAmt, setDueData] = useState("")
-  const [totalAmt, setTotalAmt] = useState("")
+  const [name, setNameData] = useState(obj?obj.name:"")
+  const [email, setEmailData] = useState(obj?obj.email:"")
+  const [classData, setClassData] = useState(obj?obj.classData:"")
+  const [phone, setPhoneData] = useState(obj?obj.phone:"")
+  const [totalFee, setTotalFee] = useState(obj?obj.totalFee:"")
+  const [dueAmt, setDueData] = useState(obj?obj.dueAmt:"")
+  const [totalAmt, setTotalAmt] = useState(obj?obj.totalAmt:"")
   const [error, setError] = useState("")
   const[agree,setAgree]=useState(false)
 
@@ -32,10 +32,12 @@ const Signup = ({ setShowReg, obj }) => {
   return
 }
     setError("")
+    console.log(name,email,phone,totalFee,dueAmt,totalAmt)
     alert("Form Submitted")
 
   }
 
+ 
 
   // console.log(obj)
   return (
@@ -58,34 +60,35 @@ const Signup = ({ setShowReg, obj }) => {
     {error}
   </label>
 )}
+
           </div>
           <div className='flex flex-col items-center font-serif mt-3 '>
             <span className='flex mr-60'>Email</span>
-            <input value={obj ? obj.email : ""} type="email " onChange={(e) => setEmailData(e.target.value)} className='h-10 w-70 border rounded ' />
+            <input value={email} type="email " onChange={(e) => setEmailData(e.target.value)} className='h-10 w-70 border rounded ' />
           </div>
           <div className='flex flex-col items-center mt-3 font-serif'>
             <span className='flex mr-60'>Class</span>
-            <input value={obj ? obj.class : ""}  type="number " onChange={(e) => setClassData(e.target.value)} className='h-10 w-70 border rounded' />
+            <input value={classData}  type="Number " onChange={(e) => setClassData(e.target.value)} className='h-10 w-70 border rounded' />
           </div>
           <div className='flex flex-col items-center mt-3 font-serif'>
             <span className='flex mr-60'>Phone</span>
-            <input value={obj ? obj.phone : ""} type="number " onChange={(e) => setPhoneData(e.target.value)} className='h-10 w-70 border rounded' />
+            <input value={phone} type="Number " onChange={(e) => setPhoneData(e.target.value)} className='h-10 w-70 border rounded' />
           </div>
           <div className='flex flex-col items-center mt-3 font-serif'>
             <span className='flex mr-55'>Total Fee</span>
-            <input value={obj ? obj.totalFee : ""} type="number " onChange={(e) => setTotalFee(e.target.value)} className='h-10 w-70 border rounded' />
+            <input value={totalFee} type="number " onChange={(e) => setTotalFee(e.target.value)} className='h-10 w-70 border rounded' />
           </div>
           <div className='flex flex-col items-center mt-3 font-serif'>
             <span className='flex mr-49'>Due Amount</span>
-            <input value={obj ? obj.dueAmt : ""} type="number " onChange={(e) => setDueData(e.target.value)} className='h-10 w-70 border rounded' />
+            <input value={dueAmt} type="number " onChange={(e) => setDueData(e.target.value)} className='h-10 w-70 border rounded' />
           </div>
           <div className='flex flex-col items-center mt-3 font-serif'>
             <span className='flex mr-48'>Total Amount</span>
-            <input value={obj ? obj.totalAmt : ""} type="number " onChange={(e) => setTotalAmt(e.target.value)} className='h-10 w-70 border rounded' />
+            <input value={totalAmt} type="number " onChange={(e) => setTotalAmt(e.target.value)} className='h-10 w-70 border rounded' />
           </div>
           <div>
             <div className='flex mt-2 items-center justify-center font-serif '>
-              <input type="Checkbox" />
+              <input checked={agree} onChange={(e)=>setAgree(e.target.checked)} type="Checkbox" />
               <p >I agree to all the </p>
               <p className='text-blue-500 underline '>Terms and Conditions</p>
             </div>
@@ -102,8 +105,10 @@ value={obj ? obj.email : ""}  */}
 
       </div>
     </div>
+    
 
   )
+  
 }
 
 export default Signup

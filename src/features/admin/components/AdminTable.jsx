@@ -45,7 +45,7 @@ const AdminTable = () => {
 
 
                     </div>
-                    <div className='flex justify-around mt-5 px-5 overflow-y-scroll h-50'>
+                    <div className='mt-5 px-5 overflow-y-scroll max-h-60 '>
                         
                     <table className='min-w-full border-2 '>
                         <thead className='bg-red-500 sticky top-[0px] ' >
@@ -67,7 +67,7 @@ const AdminTable = () => {
                         <tbody>
                             {filteredStudents?.map((student)=>{
                                 return(
-                            <tr key={student.id} className='hover:bg-gray-200'>
+                            <tr key={student.id} className='hover:bg-gray-200 max-h-fit h-fit'>
                                 <td className='border px-2 py-2'>{student.id}</td>
                                 <td className='border px-2 py-2'>{student.name}</td>
                                 <td className='border px-2 py-2'>{student.email}</td>
@@ -90,11 +90,7 @@ const AdminTable = () => {
                     </table>
                    
                     </div>
-                     {/* <div className='flex gap-5 m-5 py-5'>
-                        <button className='h-10 w-20  bg-blue-500 rounded'>Prev</button>
-                        <p className='gap-2 flex py-2 font-mono '>1 2 3 4 5</p>
-                        <button className='h-10 w-20  bg-blue-500 rounded'>Next</button>
-                    </div> */}
+                   
                     {
         showReg && (
           <div className='h-screen w-screen absolute inset-0 '>
