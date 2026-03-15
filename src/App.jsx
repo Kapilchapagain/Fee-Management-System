@@ -22,13 +22,12 @@ function App() {
       {/* <Route path='/Userlayout' element={<UserLayout/>}/> */}
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/profile/:id' element={<Profile/>}/>
-        <Route path="/" element={<AdminLayout />}>
+        <Route path="/adminlayout" element={<AdminLayout />}/>
          
           <Route path="/dueform" element={<DueForm />} />
-        </Route>
 
         {/* User Routes */}
-        <Route path="/user" element={<UserLayout />} />
+        <Route path="/userlayout" element={<UserLayout />} />
 
         {/* Auth Routes */}
         <Route path="/signup" element={<Signup />} />

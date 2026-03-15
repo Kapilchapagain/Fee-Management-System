@@ -1,11 +1,26 @@
 import { Eye, Home, Lock, Mail } from 'lucide-react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const[password,setPassword]=useState("")
   const[email,setEmail]=useState("")
+  const navigate=useNavigate()
 
   const handleSubmit=()=>{
+    if(email=="admin@gmail.com" && password=="admin123")
+      {
+      navigate("/adminlayout")
+    }
+    else if(email=="student@gmail.com" && password=="student123")
+      {
+      navigate("/userlayout")
+    }
+    else{
+      alert("Not Valid")
+    }
+      
+    
     
     console.log(email,password)
 
