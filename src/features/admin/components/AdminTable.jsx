@@ -25,6 +25,10 @@ const AdminTable = () => {
 
   const temp=students;
     const navigate=useNavigate()
+  
+    const handleDelete=(id)=>{
+      alert("Deleted data of "+id)
+    }
 
     // const handleClick=()=>{
     //     navigate("/Profile")
@@ -80,7 +84,7 @@ const AdminTable = () => {
                                 <td className='border px-2 py-2'>
                                     <div className='flex gap-2 p-2'>
                                  <Pencil onClick={()=>{setShowReg(true),setEditData(student)}} className='bg-green-400 rounded-lg' />
-                                <Trash className='bg-red-400 rounded-lg'/>
+                                <Trash onClick={()=>handleDelete(student.id)} className='bg-red-400 rounded-lg'/>
                                 <EyeIcon onClick={()=> navigate(`/profile/${student.id}`)} className='bg-blue-500 rounded-lg'/>
                                 </div>
                                 </td>

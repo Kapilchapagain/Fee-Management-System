@@ -24,7 +24,7 @@ function App() {
       <Route path='/profile/:id' element={<Profile/>}/>
         <Route path="/" element={<AdminLayout />}>
          
-          <Route path="dueform" element={<DueForm />} />
+          <Route path="/dueform" element={<DueForm />} />
         </Route>
 
         {/* User Routes */}

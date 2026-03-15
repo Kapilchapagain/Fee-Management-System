@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { students } from "../../../Data";
 
 const Dueform=({setShowForm,obj})=> {
-  const [totalFee,setTotalFee]=useState("")
   const [payDue,setPayDue]=useState("")
   const [error,setError]=useState("")
 
