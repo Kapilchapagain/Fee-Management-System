@@ -35,7 +35,7 @@ const AdminTable = () => {
     // }
   return (
     <div className='flex '>
-    <div className='m-10  h-fit rounded bg-gray-100  '>
+    <div className='m-10  h-80 rounded bg-gray-100  '>
                     <div className='flex justify-between px-5 '>
                         <div className='flex mt-2'>
                             <input onChange={(e)=>setSearch(e.target.value)}   type="text" className='h-10 w-60 border-2 rounded' placeholder=' Search...' />

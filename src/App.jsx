@@ -18,6 +18,9 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
+
+      <Route path="/" element={<Login />} />
+
       <Route path='/' element={<AdminLayout/>}/>
       {/* <Route path='/Userlayout' element={<UserLayout/>}/> */}
       <Route path='/profile' element={<Profile/>}/>
@@ -32,6 +35,7 @@ function App() {
         {/* Auth Routes */}
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        
     </Routes>
     </BrowserRouter>
     {/* <Signup/> */}

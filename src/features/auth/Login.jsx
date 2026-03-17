@@ -3,26 +3,33 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-  const[password,setPassword]=useState("")
-  const[email,setEmail]=useState("")
+  const[password,setPassword]=useState()
+  const[email,setEmail]=useState()
   const navigate=useNavigate()
 
   const handleSubmit=()=>{
+    console.log(email,password)
     if(email=="admin@gmail.com" && password=="admin123")
       {
+        localStorage.setItem("role","admin")
+        localStorage.setItem("Email",email)
+        localStorage.setItem("Password",password)
       navigate("/adminlayout")
     }
     else if(email=="student@gmail.com" && password=="student123")
       {
+        localStorage.setItem("role","student")
+        localStorage.setItem("Email",email)
+        localStorage.setItem("Password",password)
       navigate("/userlayout")
     }
     else{
-      alert("Not Valid")
+      alert("Not Valid ")
     }
       
     
     
-    console.log(email,password)
+    
 
     }
 
