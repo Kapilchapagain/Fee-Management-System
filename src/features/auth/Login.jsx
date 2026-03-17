@@ -1,6 +1,7 @@
 import { Eye, Home, Lock, Mail } from 'lucide-react'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { students } from '../../Data'
 
 const Login = () => {
   const[password,setPassword]=useState()
