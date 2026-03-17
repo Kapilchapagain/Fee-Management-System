@@ -40,14 +40,17 @@ const Login = () => {
               <h1 className='text-4xl font-bold font-serif'>Welcome Back</h1>
               <h2 className='font-serif'>Please login to your account</h2>
             </div>
-            <div className='flex flex-col border border-b-black-100 items-center font-serif '>
+           
+
+             <div className='flex flex-col items-center mt-5 font-serif'>
               <span className='flex mr-60'>Email</span>
-              <input value={email} onChange={(e)=>setEmail(e.target.value)} type="text " className='h-10 w-70 border-none  bg-transparent border rounded '  />
+              <input value={email} onChange={(e)=>setEmail(e.target.value)} type="text " className='h-10 w-70 pl-8 border rounded '  />
               <Mail className='mt-8 mr-60 absolute text-gray-400 '/>
             </div>
+
             <div className='flex flex-col items-center mt-5 font-serif'>
               <span className='flex mr-54'>Password</span>
-              <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password " className='h-10 w-70 border rounded'  />
+              <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password " className='h-10 w-70 pl-8 border rounded'  />
               <Lock className='mt-8 mr-60 absolute text-gray-400 '/>
               <Eye className='mt-8 ml-60 absolute text-gray-400 '/>
             </div>

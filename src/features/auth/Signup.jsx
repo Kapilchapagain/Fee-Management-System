@@ -81,7 +81,7 @@ const Signup = ({ setShowReg, obj }) => {
           </div>
             <div className='flex flex-col items-center mt-3 font-serif'>
             
-            <input value={password} type="password " onChange={(e) => setPassword(e.target.value)} className='h-10 w-70 border rounded' placeholder='Enter the Email' />
+            <input value={password} type="password " onChange={(e) => setPassword(e.target.value)} className='h-10 w-70 border rounded' placeholder='Enter the Password' />
           </div>
           <div className='flex flex-col items-center mt-3 font-serif'>
             

@@ -1,31 +1,9 @@
-import { IndianRupee, User, Wallet } from "lucide-react";
-
-export const cardData=[
-    {
-        icon:User,
-        title:"Total Students",
-        amount:10000,
-        color:"bg-linear-to-r from-blue-500 to-blue-300"
-    },
-     {
-        icon:Wallet,
-        title:"Total Due",
-        amount:20000,
-        color:"bg-linear-to-r from-yellow-300 to-orange-400"
-    },
-     {
-        icon:IndianRupee,
-        title:"Total Revenue",
-        amount:30000,
-        color:"bg-linear-to-r from-green-300 to-green-500"
-    }
-]
-
 export const students = [
 {
   id: 1,
   name: "Suman Shrestha",
   email: "suman.shrestha@gmail.com",
+  password: "suman123",
   class: 10,
   roll: 12,
   academicYear: "2024",
@@ -43,6 +21,7 @@ export const students = [
   id: 2,
   name: "Ramesh Adhikari",
   email: "ramesh.adhikari@gmail.com",
+  password: "ramesh123",
   class: 9,
   roll: 5,
   academicYear: "2024",
@@ -60,8 +39,9 @@ export const students = [
   id: 3,
   name: "Bikash Karki",
   email: "bikash.karki@gmail.com",
+  password: "bikash123",
   class: 8,
-  roll: 18, 
+  roll: 18,
   academicYear: "2024",
   gender: "Male",
   religion: "Hindu",
@@ -77,6 +57,7 @@ export const students = [
   id: 4,
   name: "Anita Gurung",
   email: "anita.gurung@gmail.com",
+  password: "anita123",
   class: 10,
   roll: 7,
   academicYear: "2024",
@@ -94,6 +75,7 @@ export const students = [
   id: 5,
   name: "Prakash Thapa",
   email: "prakash.thapa@gmail.com",
+  password: "prakash123",
   class: 7,
   roll: 3,
   academicYear: "2024",
@@ -108,12 +90,11 @@ export const students = [
   image: "https://randomuser.me/api/portraits/men/5.jpg",
 },
 
-/* New Students */
-
 {
   id: 6,
   name: "Kiran Rai",
   email: "kiran.rai@gmail.com",
+  password: "kiran123",
   class: 9,
   roll: 11,
   academicYear: "2024",
@@ -131,6 +112,7 @@ export const students = [
   id: 7,
   name: "Sabina Khatri",
   email: "sabina.khatri@gmail.com",
+  password: "sabina123",
   class: 8,
   roll: 9,
   academicYear: "2024",
@@ -148,6 +130,7 @@ export const students = [
   id: 8,
   name: "Dipesh Bhandari",
   email: "dipesh.bhandari@gmail.com",
+  password: "dipesh123",
   class: 10,
   roll: 4,
   academicYear: "2024",
@@ -165,6 +148,7 @@ export const students = [
   id: 9,
   name: "Nisha Tamang",
   email: "nisha.tamang@gmail.com",
+  password: "nisha123",
   class: 7,
   roll: 14,
   academicYear: "2024",
@@ -182,6 +166,7 @@ export const students = [
   id: 10,
   name: "Arjun KC",
   email: "arjun.kc@gmail.com",
+  password: "arjun123",
   class: 10,
   roll: 2,
   academicYear: "2024",
