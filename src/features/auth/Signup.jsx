@@ -107,7 +107,7 @@ const Signup = ({ setShowReg, obj }) => {
             <div className='flex mt-2 items-center justify-center font-serif '>
               <input checked={agree} onChange={(e)=>setAgree(e.target.checked)} type="Checkbox"  />
               <p >I agree to all the </p>
-              <p className='text-blue-500 underline '>Terms and Conditions</p>
+              <p className='cursor-pointer text-blue-500 hover:underline'>Terms and Conditions</p>
             </div>
           </div>
           <div className='flex justify-center p-3 '>

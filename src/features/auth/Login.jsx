@@ -58,7 +58,7 @@ const Login = () => {
             <div className='flex mt-5 items-center justify-center font-serif '>
               <input type="Checkbox"/>
               <p className=''>Remember me</p>
-              <p className='ml-10 text-blue-500 ' onClick={()=>navigate("/forgotpassword")}>Forgot Password?</p>
+              <p className='cursor-pointer  ml-10 text-blue-500 hover:underline ' onClick={()=>navigate("/forgotpassword")}>Forgot Password?</p>
             </div>
           
                 
@@ -68,7 +68,7 @@ const Login = () => {
             </div>
             <div className='flex mt-5 justify-center font-serif'>
               <p>Don't have an account?</p>
-              <p className='text-blue-500 underline'>Sign Up</p>
+              <p className='cursor-pointer text-blue-500 hover:underline'>Sign Up</p>
             </div>
             <div>
              
