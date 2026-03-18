@@ -10,41 +10,48 @@ import UserLayout from './layouts/UserLayout'
 import Profile from './profile/Profile'
 import DueForm from './features/user/components/DueForm'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ForgotPassword from './features/auth/ForgotPassword'
+import SendOtp from './features/auth/SendOtp'
+import ChangePassword from './features/auth/ChangePassword'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <BrowserRouter>
-    <Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
 
-      <Route path="/" element={<Login />} />
+          <Route path='/changepassword' element={<ChangePassword />} />
+          <Route path='/sendotp' element={<SendOtp />} />
+          <Route path='/forgotpassword' element={<ForgotPassword />} />
+          
 
-      <Route path='/' element={<AdminLayout/>}/>
-      {/* <Route path='/Userlayout' element={<UserLayout/>}/> */}
-      <Route path='/profile' element={<Profile/>}/>
-      <Route path='/profile/:id' element={<Profile/>}/>
-        <Route path="/adminlayout" element={<AdminLayout />}/>
-         
+          <Route path='/' element={<AdminLayout />} />
+          {/* <Route path='/Userlayout' element={<UserLayout/>}/> */}
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/profile/:id' element={<Profile />} />
+          <Route path="/adminlayout" element={<AdminLayout />} />
+
           <Route path="/dueform" element={<DueForm />} />
 
-        {/* User Routes */}
-        <Route path="/userlayout" element={<UserLayout />} />
+          {/* User Routes */}
+          <Route path="/userlayout" element={<UserLayout />} />
 
-        {/* Auth Routes */}
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        
-    </Routes>
-    </BrowserRouter>
-    {/* <Signup/> */}
-    {/* <Login/> */}
-    {/* <AdminLayout/> */}
-    {/* <UserLayout/> */}
-    {/* <Profile/> */}
-    {/* <DueForm/> */}
-    
+          {/* Auth Routes */}
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+
+        </Routes>
+      </BrowserRouter>
+      {/* <Signup/> */}
+      {/* <Login/> */}
+      {/* <AdminLayout/> */}
+      {/* <UserLayout/> */}
+      {/* <Profile/> */}
+      {/* <DueForm/> */}
+
     </>
   )
 }
