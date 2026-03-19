@@ -33,7 +33,7 @@ const Login = () => {
     
 
     }
-
+    
   return (
     <div className='h-screen w-screen flex bg-gray-200 items-center justify-center'>
         <div className='h-120 w-120   rounded-lg bg-white '> 

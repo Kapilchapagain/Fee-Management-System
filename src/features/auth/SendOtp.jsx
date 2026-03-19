@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
 
 const SendOtp = () => {
+  const[otp,setOtp]=useState("");
     const navigate=useNavigate()
+     let cOtp=12345;
   return (
   <div className="h-screen w-screen flex items-center justify-center bg-gray-100">
 
@@ -26,13 +28,18 @@ const SendOtp = () => {
           </label>
           <input
             type="number"
+            onChange={(e)=>setOtp(e.target.value)}
             placeholder="Enter the otp"
             className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         {/* Button */}
-        <button onClick={()=>navigate("/changepassword")}  className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+        <button onClick={()=>{
+        if(cOtp=otp)
+         navigate("/changepassword")}
+        }
+           className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
           Submit
         </button>
 
